@@ -1,5 +1,7 @@
 {
   "name": "techishare",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

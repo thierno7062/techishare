@@ -3,18 +3,21 @@
     <ion-title>
       Blank
     </ion-title>
+    <ion-button  fill="solid" routerLink="/student" slot="end" expand="block" color="success">
+      Student
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button (click)="getUser()" expand="block" fill="clear" shape="round">
+    Click me
+  </ion-button>
+  <ion-list>
+    <ion-item *ngFor="let user  of users">
+      <div><b>{{user.name}}***>{{user.age}}</b></div>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
